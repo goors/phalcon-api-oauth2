@@ -10,7 +10,7 @@ $settings = array(
 		'host' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'name' => 'helioapi',
+		'name' => 'api',
 		'port' => 3306
 	),
 
@@ -19,7 +19,7 @@ $settings = array(
         'host'     => 'localhost',
         'port'     => 3306,
         'username' => 'root',
-        'password' => 'sanja11',
+        'password' => '',
         'dbname'   => 'oauth2',
     )
 );
