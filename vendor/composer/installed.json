@@ -1,0 +1,61 @@
+[
+    {
+        "name": "league/oauth2-server",
+        "version": "3.2.2",
+        "version_normalized": "3.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thephpleague/oauth2-server.git",
+            "reference": "9658aa80ba26a0a5a7ac399d340e240de81814c2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/9658aa80ba26a0a5a7ac399d340e240de81814c2",
+            "reference": "9658aa80ba26a0a5a7ac399d340e240de81814c2",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "replace": {
+            "lncd/oauth2": "*"
+        },
+        "require-dev": {
+            "league/phpunit-coverage-listener": "~1.0",
+            "mockery/mockery": ">=0.7.2"
+        },
+        "time": "2014-07-15 14:50:11",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "League\\OAuth2\\Server": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alex Bilbie",
+                "email": "hello@alexbilbie.com",
+                "homepage": "http://www.httpster.org",
+                "role": "Developer"
+            }
+        ],
+        "description": "A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.",
+        "keywords": [
+            "Authentication",
+            "api",
+            "auth",
+            "authorization",
+            "oauth",
+            "oauth2",
+            "protect",
+            "resource",
+            "secure",
+            "server"
+        ]
+    }
+]
