@@ -29,4 +29,4 @@ How to use:
 TODO: Add oauth2 scope and static html page for allow/deny like Google oauth2 or Facebook oauth.
 
 Enjoy and do not forgot to run sql file vendor/league/oauth-server/sql/mysql.sql for oauth2!
-For any questions suggestions please check my profile page and send me an email.
+For any questions/suggestions please check my profile page and send me email.
