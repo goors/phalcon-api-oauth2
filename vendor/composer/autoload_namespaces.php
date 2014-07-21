@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'League\\OAuth2\\Server' => array($vendorDir . '/league/oauth2-server/src')
+    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
+    'League\\OAuth2\\Server' => array($vendorDir . '/league/oauth2-server/src'),
 );

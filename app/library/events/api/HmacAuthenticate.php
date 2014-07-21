@@ -44,20 +44,12 @@ class HmacAuthenticate extends \Phalcon\Events\Manager implements IEvent {
 			if ($event->getType() == 'beforeExecuteRoute') {
 
                 if(!preg_match("/access/", $app->request->getURI())){
-                    $oauthdb = new \Phalcon\Db\Adapter\Pdo\Mysql($this->oauthConfig->toArray());
 
+                    $app->resource->setTokenKey('token');
+                    $app->resource->isValid();
 
-                    $session = new \Oauth2\Server\Storage\Pdo\Mysql\Session($oauthdb);
-                    $valid = $session->validateAccessToken($app->request->getHeaders()['ACCESS_TOKEN']);
-                    if(!$valid){
-                        $response = new \Phalcon\Http\Response();
-                        $response->setStatusCode(401, "Unauthorized");
-                        $response->setContent("Access denied");
-                        $response->send();
-                        return false;
-                    }
-                    return true;
                 }
+
 			}
 		});
 	}

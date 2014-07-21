@@ -48,7 +48,6 @@ try {
 
     $oauthConfig = $app->getOauth2Config($config);
 
-
 	// Setup HMAC Authentication callback to validate user before routing message
 	// Failure to validate will stop the process before going to proper Restful Route
 	$app->setEvents(new \Events\Api\HmacAuthenticate($oauthConfig));
@@ -78,8 +77,6 @@ try {
         return $server;
     });
 
-
-
     $app->get('/access', function () use ($app) {
 
         try {
@@ -91,10 +88,28 @@ try {
             );
 
         } catch (League\OAuth2\Server\Exception\ClientException $e) {
-            var_export($e);
+            //var_export($e);
             echo $e->getMessage();
         } catch (\Exception $e) {
             echo $e->getTraceAsString();
+        }
+    });
+
+    $app->finish(function () use ($app) {
+
+
+        if(!preg_match("/access/", $app->request->getURI())){
+            // check format
+            $format = $app->request->getQuery('format', 'string', 'json');
+
+            switch ($format) {
+                case 'json':
+                    echo (json_encode($app->getReturnedValue()));
+                    break;
+                case 'xml':
+                    print \Utilities\Outputformats\ArrayToXML::toXml($app->getReturnedValue());
+                    break;
+            }
         }
     });
 

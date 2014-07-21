@@ -7,15 +7,36 @@ class ExampleController extends \Phalcon\Mvc\Controller {
 
 	public function pingAction() {
         //new Jete();
-		echo "pong";
+		return array(
+
+            'book' => array(
+                array(
+                    '@attributes' => array(
+                        'author' => 'George Orwell'
+                    ),
+                    'title' => '1984'
+                ),
+                array(
+                    '@attributes' => array(
+                        'author' => 'Isaac Asimov'
+                    ),
+                    'title' => 'Foundation',
+                    'price' => '$15.61'
+                ),
+                array(
+                    '@attributes' => array(
+                        'author' => 'Robert A Heinlein'
+                    ),
+                    'title' => 'Stranger in a Strange Land',
+                    'price' => array(
+                        '@attributes' => array(
+                            'discount' => '10%'
+                        ),
+                        '@value' => '$18.00'
+                    )
+                )
+            )
+        );
 	}
 
-
-    public function testAction($id) {
-        echo "test (id: $id)";
-    }
-
-    public function skipAction($name) {
-        echo "auth skipped ($name)";
-    }
 }

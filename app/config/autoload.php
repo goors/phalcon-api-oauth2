@@ -10,9 +10,8 @@ $vendorDir = dirname(dirname(dirname(__FILE__)))."/vendor";
 
 $autoload = [
 	'Events\Api' => $dir . '/library/events/api/',
-	'Micro\Messages' => $dir . '/library/micro/messages/',
 	'Utilities\Debug' => $dir . '/library/utilities/debug/',
-	'Security\Hmac' => $dir . '/library/security/hmac/',
+    'Utilities\Outputformats' => $dir . '/library/utilities/outputformats',
 	'Application' => $dir . '/library/application/',
 	'Interfaces' => $dir . '/library/interfaces/',
 	'Controllers' => $dir . '/controllers/',
