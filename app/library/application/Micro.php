@@ -71,7 +71,27 @@ class Micro extends \Phalcon\Mvc\Micro implements IRun {
 			return $connection;
 		});
 
-		$this->setDI($di);
+        $di['resource'] = function () use ($di) {
+
+            $creds = array(
+                'host' => $di->get('config')->oauth2->host,
+                'username' => $di->get('config')->oauth2->username,
+                'password' => $di->get('config')->oauth2->password,
+                'dbname' => $di->get('config')->oauth2->dbname
+            );
+
+            $oauthdb = new \Phalcon\Db\Adapter\Pdo\Mysql(
+                $creds
+            );
+            $resource = new \League\OAuth2\Server\Resource(
+                new \Oauth2\Server\Storage\Pdo\Mysql\Session($oauthdb)
+            );
+            $resource->setRequest(new \Oauth2\Server\Storage\Pdo\Mysql\Request());
+
+            return $resource;
+        };
+
+        $this->setDI($di);
 	}
 
     public function getOauth2Config($file){

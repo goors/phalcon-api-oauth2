@@ -8,9 +8,9 @@ $settings = array(
 	'database' => array(
 		'adapter' => 'Mysql',	/* Possible Values: Mysql, Postgres, Sqlite */
 		'host' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'name' => 'api',
+		'username' => 'api',
+		'password' => 'api',
+		'name' => 'helioapi',
 		'port' => 3306
 	),
 
@@ -18,8 +18,8 @@ $settings = array(
         'adapter'  => 'Mysql',
         'host'     => 'localhost',
         'port'     => 3306,
-        'username' => 'root',
-        'password' => '',
+        'username' => 'api',
+        'password' => 'api',
         'dbname'   => 'oauth2',
     )
 );
