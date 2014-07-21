@@ -16,7 +16,9 @@ Reason for this is to have both things in one place (this works for me).
 How to use:
 
 1) Get access token with api.domain.com/access?client_id=id&client_secret=secret
+
 2) With access token just access you api method api.domain.com/method?token=token from 1)
+
 3) Also you different formats:
 
     - xml ->
@@ -24,6 +26,7 @@ How to use:
             api.domain.com/method.xml?token=token
 
     - json is supported by default
+
 4) Update app/config/config.php with your own stuff
 
 TODO: Add oauth2 scope and static html page for allow/deny like Google oauth2 or Facebook oauth.
