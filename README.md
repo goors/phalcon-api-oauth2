@@ -1,10 +1,10 @@
-phalcon-api-ouath2
+phalcon-api-oauth2
 ==================
 
 
-This repo containts php oauth2-server auth with ready to use phalcon reset api that supports
+This repo contains php oauth2-server auth with ready to use phalcon rest api that supports
 post, put, delete, get, options, patch methods.
-In reset api there is only few routes and one controller as example.
+In rest api there is only few routes and one controller as example.
 
 This repo is made by combining:
 
